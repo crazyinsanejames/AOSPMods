@@ -21,6 +21,7 @@ import sh.siava.AOSPMods.systemui.DoubleTaptoWake;
 import sh.siava.AOSPMods.systemui.FeatureFlagsMods;
 import sh.siava.AOSPMods.systemui.KeyguardBottomArea;
 import sh.siava.AOSPMods.systemui.LTEiconChange;
+import sh.siava.AOSPMods.systemui.LockscreenAlbumArt;
 import sh.siava.AOSPMods.systemui.NavBarResizer;
 import sh.siava.AOSPMods.systemui.NotificationExpander;
 import sh.siava.AOSPMods.systemui.QQSBrightness;
@@ -36,7 +37,7 @@ public class AOSPMods implements IXposedHookLoadPackage{
 
     public static ArrayList<Class> modPacks = new ArrayList<>();
     public static ArrayList<IXposedModPack> runningMods = new ArrayList<>();
-    public Context mContext = null;
+    public static Context mContext = null;
 
     public AOSPMods()
     {
@@ -64,6 +65,7 @@ public class AOSPMods implements IXposedHookLoadPackage{
         modPacks.add(miscSettings.class);
         modPacks.add(QQSBrightness.class);
         modPacks.add(NotificationExpander.class);
+        modPacks.add(LockscreenAlbumArt.class);
 
     }
     @Override
